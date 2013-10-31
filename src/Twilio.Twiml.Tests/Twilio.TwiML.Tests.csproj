@@ -48,24 +48,9 @@
     <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="JWT">
-      <HintPath>..\packages\JWT.1.3.2\lib\3.5\JWT.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
-    <Reference Include="OPSSDK">
-      <HintPath>..\packages\ozeki.opssdk.sms.3.9.0\lib\net40\OPSSDK.dll</HintPath>
-    </Reference>
-    <Reference Include="ozeki.net.sms">
-      <HintPath>..\packages\ozeki.net.sms.4.2.62\lib\net40\ozeki.net.sms.exe</HintPath>
-    </Reference>
-    <Reference Include="PhoneNumbers">
-      <HintPath>..\packages\libphonenumber-csharp.4.4.0.1\lib\PhoneNumbers.dll</HintPath>
-    </Reference>
     <Reference Include="RestSharp">
       <HintPath>..\packages\RestSharp.104.2.0\lib\net4\RestSharp.dll</HintPath>
-    </Reference>
-    <Reference Include="SMSClient">
-      <HintPath>..\packages\ozeki.net.sms.4.2.62\lib\net40\SMSClient.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core">
@@ -73,41 +58,6 @@
     </Reference>
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq" />
-    <Reference Include="Twilio.Activities">
-      <HintPath>..\packages\Twilio.Activities.0.0.12.0\lib\net40\Twilio.Activities.dll</HintPath>
-    </Reference>
-    <Reference Include="Twilio.Api, Version=3.4.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Twilio.3.6.2\lib\3.5\Twilio.Api.dll</HintPath>
-    </Reference>
-    <Reference Include="Twilio.Client.Capability">
-      <HintPath>..\packages\Twilio.Client.3.4.4\lib\3.5\Twilio.Client.Capability.dll</HintPath>
-    </Reference>
-    <Reference Include="Twilio.Mvc">
-      <HintPath>..\packages\Twilio.Mvc.3.1.12\lib\3.5\Twilio.Mvc.dll</HintPath>
-    </Reference>
-    <Reference Include="twilio.sugar">
-      <HintPath>..\packages\twilio.sugar.1.1\lib\net40\twilio.sugar.dll</HintPath>
-    </Reference>
-    <Reference Include="Twilio.Twiml, Version=3.4.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Twilio.TwiML.3.3.2\lib\3.5\Twilio.Twiml.dll</HintPath>
-    </Reference>
-    <Reference Include="Twilio.WebMatrix">
-      <HintPath>..\packages\Twilio.WebMatrix.3.1.3\lib\3.5\Twilio.WebMatrix.dll</HintPath>
-    </Reference>
-    <Reference Include="TwilioFluent.Mvc3">
-      <HintPath>..\packages\TwilioFluent.Mvc3.1.0.1.0\lib\net40\TwilioFluent.Mvc3.dll</HintPath>
-    </Reference>
-    <Reference Include="TwilioFluent.TwiML">
-      <HintPath>..\packages\TwilioFluent.TwiML.1.0.1.0\lib\net40-Client\TwilioFluent.TwiML.dll</HintPath>
-    </Reference>
-    <Reference Include="TwilioSharp">
-      <HintPath>..\packages\TwilioSharpCore.1.0\lib\TwilioSharp.dll</HintPath>
-    </Reference>
-    <Reference Include="TwilioSharp.MVC3">
-      <HintPath>..\packages\TwilioSharpMVC.1.0\lib\TwilioSharp.MVC3.dll</HintPath>
-    </Reference>
     <Reference Include="xunit, Version=1.9.0.1566, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\xunit.1.9.0.1566\lib\xunit.dll</HintPath>
@@ -139,7 +89,6 @@
     <Compile Include="MessageTests.cs" />
     <Compile Include="QuickStarts\SmsHelloMonkey.cs" />
     <Compile Include="QuickStarts\HelloMonkey.cs" />
-    <Compile Include="SmsHandlerSample.cs" />
     <Compile Include="SmsTests.cs" />
     <Compile Include="RecordTests.cs" />
     <Compile Include="RejectTests.cs" />
@@ -153,7 +102,12 @@
     <Compile Include="ResponseTests.cs" />
     <Compile Include="SayTests.cs" />
     <Compile Include="TestBase.cs" />
-    <Compile Include="TestSMS.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Twilio.Twiml\Twilio.TwiML.csproj">
+      <Project>{D810C485-249B-499D-B5BA-8D6507E11DED}</Project>
+      <Name>Twilio.TwiML</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="TwiML.xsd">
