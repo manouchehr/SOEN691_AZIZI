@@ -44,8 +44,18 @@ namespace MessageWindowsFormsApplication
             string AuthToken = "{{ auth_token }}";
             var twilio = new TwilioRestClient(AccountSid, AuthToken);
             int maxsize=10;
-            var queue = twilio.CreateQueue("newqueue", maxsize);           
-            MessageBox.Show(queue.Sid.ToString());
+            try
+            {
+                 twilio.CreateQueue("newqueue", null);
+            }
+            catch (ArgumentException ex) 
+            {
+                MessageBox.Show(ex.Message);
+                return;
+            
+            }
+
+            //MessageBox.Show(queue.Sid.ToString());
             
         }
     }
