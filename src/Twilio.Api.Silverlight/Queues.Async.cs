@@ -28,6 +28,7 @@ namespace Twilio
         {
             if (callback == null)
                 throw new System.ArgumentException("'Action<Queue> callback' cannot be null", "callback");
+
             var request = new RestRequest(Method.POST);
             request.Resource = "Accounts/{AccountSid}/Queues.json";
 

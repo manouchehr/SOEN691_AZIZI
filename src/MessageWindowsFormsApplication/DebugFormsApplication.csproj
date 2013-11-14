@@ -8,8 +8,8 @@
     <ProjectGuid>{7F377503-C4B3-4016-9502-B77E01D6CB8E}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MessageWindowsFormsApplication</RootNamespace>
-    <AssemblyName>MessageWindowsFormsApplication</AssemblyName>
+    <RootNamespace>DebugFormsApplication</RootNamespace>
+    <AssemblyName>DebugFormsApplication</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>Client</TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
@@ -65,6 +65,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

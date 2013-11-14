@@ -42,7 +42,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Twilio.Api.Tests.Integration", "Twilio.Api.Tests.Integration\Twilio.Api.Tests.Integration.csproj", "{2E1A3B46-C072-48E0-92BF-F2901036979F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessageWindowsFormsApplication", "MessageWindowsFormsApplication\MessageWindowsFormsApplication.csproj", "{7F377503-C4B3-4016-9502-B77E01D6CB8E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DebugFormsApplication", "MessageWindowsFormsApplication\DebugFormsApplication.csproj", "{7F377503-C4B3-4016-9502-B77E01D6CB8E}"
 EndProject
 Global
 	GlobalSection(TestCaseManagementSettings) = postSolution
