@@ -1,5 +1,6 @@
 ﻿using System;
 using RestSharp;
+using System.Collections.Generic;
 
 namespace Twilio
 {
@@ -54,7 +55,33 @@ namespace Twilio
 
             return Execute<AccountResult>(request);
         }
+        /// <summary>
+        /// List subaccounts that match the provided FriendlyName for the authenticated account. Makes a GET request to the Account List resource.
+        /// </summary>
+        /// <param name="friendlyName">Name associated with this account</param>
+        public AccountResult ListSubAccounts(string friendlyName, AccountStatus AccountFilter)
+        {
+            AccountResult accounts = (AccountResult)ListSubAccounts(friendlyName);
+            AccountResult accountsFilter= new AccountResult();
 
+            try
+            {
+                foreach (var a in accounts.Accounts)
+                {
+                    if (a.Status == AccountFilter.ToString() )
+                    {
+                        accountsFilter.Accounts.Add(a);
+                
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new System.Exception(ex.Message);
+             }
+        
+            return accountsFilter;
+        }
 		/// <summary>
 		/// Creates a new subaccount under the authenticated account. Makes a POST request to the Account List resource.
 		/// </summary>

@@ -24,6 +24,7 @@ namespace MessageWindowsFormsApplication
             string AuthToken = "{{ auth_token }}";   
             var twilio = new TwilioRestClient(AccountSid, AuthToken);        
             var message = twilio.SendMessage("+14158141829", "+15558675309", "Jenny please?! I love you <3", new string[] {"http://www.example.com/hearts.png"});
+            
             try
             {
                 MessageBox.Show(message.Sid);
@@ -57,6 +58,19 @@ namespace MessageWindowsFormsApplication
 
             //MessageBox.Show(queue.Sid.ToString());
             
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            string AccountSid = "AC32a3c49700934481addd5ce1659f04d2";
+            string AuthToken = "{{ auth_token }}";
+            var twilio = new TwilioRestClient(AccountSid, AuthToken);
+            var accounts = twilio.ListSubAccounts("MySubaccount",AccountStatus.Active);
+            foreach (var account in accounts.Accounts)
+            {
+                Console.WriteLine(account.Status);
+            }
+
         }
     }
 }
