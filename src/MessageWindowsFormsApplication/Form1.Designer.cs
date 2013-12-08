@@ -35,9 +35,9 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(53, 22);
+            this.button1.Location = new System.Drawing.Point(12, 22);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(195, 23);
+            this.button1.Size = new System.Drawing.Size(260, 49);
             this.button1.TabIndex = 0;
             this.button1.Text = "TwilioRestClient deserializes RestExceptions";
             this.button1.UseVisualStyleBackColor = true;
@@ -45,21 +45,21 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(53, 77);
+            this.button2.Location = new System.Drawing.Point(12, 101);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(195, 23);
+            this.button2.Size = new System.Drawing.Size(260, 52);
             this.button2.TabIndex = 1;
-            this.button2.Text = "CreateQueue overloads  ";
+            this.button2.Text = "CreateQueue overloads cause confusion";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(53, 135);
+            this.button3.Location = new System.Drawing.Point(12, 171);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(195, 23);
+            this.button3.Size = new System.Drawing.Size(260, 64);
             this.button3.TabIndex = 2;
-            this.button3.Text = " filter subaccounts list by status ";
+            this.button3.Text = "No way to filter subaccounts list by status or friendly name";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -72,7 +72,7 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Capturing Bugs";
             this.ResumeLayout(false);
 
         }
